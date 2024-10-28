@@ -7,7 +7,25 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="276,99,0,0" VerticalAlignment="Top" Height="69" Width="126"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="134,49,0,0" VerticalAlignment="Top" Height="69" Width="126" Grid.Column="1"/>
+        <GroupBox Header="选择" Margin="49,32,103,18">
+            <StackPanel Margin="-5,0,47,0" Height="68" Orientation="Horizontal">
+                <RadioButton x:Name="chs" Width="79" Content="内用、"/>
+                <RadioButton Content="外带"/>
+            </StackPanel>
+        </GroupBox>
+        <StackPanel x:Name="menu" Background="#FFAED075" Margin="-2,135,2,10" Grid.RowSpan="2"/>
+        <TextBox x:Name="order" HorizontalAlignment="Center" Margin="0,20,0,0" Grid.Row="2" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="368" Height="112" Background="#FF34B18C"/>
+        <Button Grid.Column="1" Content="Button" HorizontalAlignment="Left" Margin="112,0,0,0" Grid.Row="2" VerticalAlignment="Center" Height="88" Width="122"/>
 
     </Grid>
 </Window>
